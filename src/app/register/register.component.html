@@ -1,0 +1,51 @@
+<h1>Register</h1>
+<div>
+    <form action="">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text" placeholder="name" [(ngModel)] = "fullName" name="fullname">
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <label class="radio-inline">
+                    <input class="form-check-input" type="radio" [(ngModel)]="gender" name="male" value="male"/>Male
+                  </label>
+                  <label class="radio-inline"> 
+                    <input class="form-check-input" type="radio" [(ngModel)]="gender" name="female" value="female"  />Female
+                  </label>
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td>
+                    <input type="date" [(ngModel)] = "dob" name="dob">
+                </td>
+            </tr>
+            <tr>
+                <td>English Level: </td>
+                <td>
+                    <input type="range" min="30" max="300" [(ngModel)] = "level" name="level">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" (click)="login()" value="login">
+                </td>
+                <td>
+                    <input type="button" (click)= "showInfo()" value="show">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">{{fullName}}</div>
+        <div class="col">{{gender}}</div>
+        <div class="col">{{dob}}</div>
+        <div class="col">{{level}}</div>
+    </div>
+</div>
